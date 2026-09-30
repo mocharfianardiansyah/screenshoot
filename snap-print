@@ -1,0 +1,7 @@
+#!/bin/sh
+# snap-print — launcher snap.py untuk tombol Print Screen di i3.
+# Membunuh instance lama (biar sekali tekan = satu overlay segar),
+# lalu menjalankan snap.py sekali pakai.
+pkill -f "[s]nap.py" 2>/dev/null || true
+sleep 0.2
+exec /usr/bin/python3 /home/mocharfian/ai/screenshoot/snap.py
